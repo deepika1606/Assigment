@@ -4,9 +4,9 @@ const reader = require('xlsx')
 const file = reader.readFile('dummy.xlsx');
 const sheets = file.SheetNames   //Here we will get no of sheets
 console.log(sheets)
-for (let i = 0; i < sheets.length; i++) {                 
+//for (let i = 0; i < sheets.length; i++) {                 
     const temp = reader.utils.sheet_to_json(
-        file.Sheets[file.SheetNames[i]])
+        file.Sheets[file.SheetNames[0]])
         //console.log(temp);
     //temp.forEach((res) => { data.push(res) })
     console.log(temp);
